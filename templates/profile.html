@@ -1,109 +1,123 @@
-<html>
-    <head>
-        <title>{% block title%}
-            PROFILE
-            {% endblock %}</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
-    </head>
-    <body style="background-color:rgb(0, 0, 0)">
-            {% block content %}
-            <style type="text/css">
+{%extends 'base.html'%}
+{% block title %}
+    STACKED
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
 
 
-                .img_deg
-                {
-                    position: absolute;
-                    width: 50%;
-                    left: 25%;
-                    border-radius: 10px
-                }
-            
-                .pos_cen
-                {
-                    position: absolute;
-                    width: 96%;
-                    left: 2%;
-                    top: 10%;
-            
-                }
-            
-                .main_text_pos
-                {
-                    position: absolute;
-                    width: 100%;
-                    left: 2%;
-                    top: -3%;
-                }
-            
-                .home_text_pos
-                {
-                    position: absolute;
-                    left: 69%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-            
-                    
-                }
-            
-                .profile_text_pos
-                {
-                    position: absolute;
-                    left: 79%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-                }
-            
-                .works_text_pos
-                {
-                    position: absolute;
-                    left: 89%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-                }
-            
-            
-            </style>
-            
-            
-                <div class="pos_cen">
-            
-                <image class="img_deg" src="{{ url_for('static', filename='images/profile_page.png')}}"></image>
-                </div>
-            
-                <div class="main_text_pos">
-                <p > PROFILES</p>
-                </div>
-            
-                <ul>
-                    <div class="home_text_pos">
-                    <li><a href="/home"> Home</a></li>
-                    </div>
-                </ul>
-            
-                <ul>
-                    <div class="profile_text_pos">
-                    <li><a href="/profile"> Profile</a></li>
-                    </div>
-                </ul>
-            
-                <ul>
-                    <div class="works_text_pos">
-                    <li><a href="/works"> Works</a></li>
-                    </div>
-                </ul>
-            {% endblock %}
-    </body>
+    .img_deg
+    {
+        float: right;
+        width: 100%;
+        border-radius: 10px
+    }
 
-</html>
+    .pos_cen
+    {
+        position: absolute;
+        width: 96%;
+        left: 2%;
+        top: 10%;
+
+    }
+
+    .main_text_pos
+    {
+        position: absolute;
+        width: 100%;
+        left: 2%;
+        top: -3%;
+    }
+
+    .home_text_pos
+    {
+        position: absolute;
+        left: 69%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+
+        
+    }
+
+    .profile_text_pos
+    {
+        position: absolute;
+        left: 79%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    .works_text_pos
+    {
+        position: absolute;
+        left: 89%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    a:link {
+                    color: rgb(255, 255, 255);
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+
+                a:visited {
+                    color: #ffffff;
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: #16EEBC;
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+
+                a:active {
+                    color: rgb(83, 83, 83);
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+
+
+</style>
+
+
+    <div class="pos_cen">
+
+    <image class="img_deg" src="{{ url_for('static', filename='images/group2.jpg')}}" width="1880"></image>
+    </div>
+
+    <div class="main_text_pos">
+    <p > STACKED.</p>
+    </div>
+
+    <ul>
+        <div class="home_text_pos">
+        <li><a href="/home"> Home</a></li>
+        </div>
+    </ul>
+
+    <ul>
+        <div class="profile_text_pos">
+        <li><a href="/profile"> Profile</a></li>
+        </div>
+    </ul>
+
+    <ul>
+        <div class="works_text_pos">
+        <li><a href="/works"> Works</a></li>
+        </div>
+    </ul>
+{% endblock %}
