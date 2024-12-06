@@ -4,6 +4,71 @@
 {% endblock %}
 
 {% block content %}
+<style type="text/css">
+
+
+    .img_deg
+    {
+        float: right;
+        width: 100%;
+        border-radius: 10px
+    }
+
+    .pos_cen
+    {
+        position: absolute;
+        width: 96%;
+        left: 2%;
+        top: 10%;
+
+    }
+
+    .main_text_pos
+    {
+        position: absolute;
+        width: 100%;
+        left: 2%;
+        top: -3%;
+    }
+
+    .home_text_pos
+    {
+        position: absolute;
+        left: 69%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+
+        
+    }
+
+    .profile_text_pos
+    {
+        position: absolute;
+        left: 79%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    .works_text_pos
+    {
+        position: absolute;
+        left: 89%;
+        top: 2%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+
+</style>
+
 
     <div class="pos_cen">
 
@@ -14,15 +79,21 @@
     <p > STACKED.</p>
     </div>
 
-    <div class="home_text_pos">
-        <p > Home</p>
+    <ul>
+        <div class="home_text_pos">
+        <li><a href="/home"> Home</a></li>
         </div>
+    </ul>
 
-    <div class="profile_text_pos">
-    <p > Profile</p>
-    </div>
-
-    <div class="works_text_pos">
-        <p > Works</p>
+    <ul>
+        <div class="profile_text_pos">
+        <li><a href="/profile"> Profile</a></li>
         </div>
+    </ul>
+
+    <ul>
+        <div class="works_text_pos">
+        <li><a href="/works"> Works</a></li>
+        </div>
+    </ul>
 {% endblock %}
