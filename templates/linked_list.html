@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List Operations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <style>
+        
+body {
+    background: linear-gradient(to right, #16EEBC, #000000);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: #121212;
+    padding: 15px 0;
+    border-bottom: 2px solid #16EEBC;
+}
+
+header h1 {
+    color: #16EEBC;
+    margin: 0;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.operations form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.operations form label {
+    color: #16EEBC;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.operations form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #16EEBC;
+    border-radius: 5px;
+    background-color: #121212;
+    color: white;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.operations form input[type="text"]:focus {
+    border-color: #16EEBC;
+    outline: none;
+    box-shadow: 0 0 8px #16EEBC;
+}
+
+.operations .buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #16EEBC; 
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.operations .buttons button:hover {
+    background-color: #2b6356; 
+    transform: scale(1.05);
+}
+
+.works_text_pos
+                {
+                    position: absolute;
+                    left: 89%;
+                    top: 2%;
+                    font-family: 'Poppins';
+                    font-size: 24px;
+                    font-weight: 600;
+                    color:#ffffff;
+                }
+
+                a:link {
+                    color: rgb(255, 255, 255);
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+
+                a:visited {
+                    color: #ffffff;
+                    background-color: transparent;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: #16EEBC;
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+
+                a:active {
+                    color: rgb(83, 83, 83);
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+
+
+    </style>
+    <header>
+        <nav>
+            <h1>Linked List Operations</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section class="operations">
+            <form method="POST" action="/update">
+                <label for="data">Enter Your Data:</label>
+                <input type="text" id="data" name="data" placeholder="Enter data (if needed)">
+                <div class="buttons">
+                    <button type="submit" name="operation" value="insert_beginning">Insert at Beginning</button>
+                    <button type="submit" name="operation" value="insert_end">Insert at End</button>
+                    <button type="submit" name="operation" value="remove_beginning">Remove Beginning</button>
+                    <button type="submit" name="operation" value="remove_end">Remove End</button>
+                    <button type="submit" name="operation" value="remove_at">Remove Specific Data</button>
+                </div>
+
+                <ul>
+                    <div class="works_text_pos">
+                    <li><a href="/works"> Back to Works</a></li>
+                    </div>
+                </ul>
+            </form>
+        </section>
+
+        <section class="linked-list">
+            <h2>Current Linked List:</h2>
+            <ul>
+                {% for item in linked_list %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
