@@ -16,8 +16,8 @@
                 .img_deg
                 {
                     position: absolute;
-                    width: 50%;
-                    left: 25%;
+                    width: 70%;
+                    left: 15%;
                     border-radius: 10px
                 }
             
@@ -26,7 +26,7 @@
                     position: absolute;
                     width: 96%;
                     left: 2%;
-                    top: 10%;
+                    top: 15%;
             
                 }
             
@@ -39,39 +39,74 @@
                 }
             
                 .home_text_pos
-                {
-                    position: absolute;
-                    left: 69%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-            
+    {
+        position: absolute;
+        left: 59%;
+        top: 5%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+
+        
+    }
+
+    .profile_text_pos
+    {
+        position: absolute;
+        left: 69%;
+        top: 5%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    .works_text_pos
+    {
+        position: absolute;
+        left: 79%;
+        top: 5%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    .contacts_text_pos
+    {
+        position: absolute;
+        left: 89%;
+        top: 5%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+
+    }
+
+    .linked_list_text_pos
+    {
+        position: absolute;
+        left: 23%;
+        top: 63%;
+        font-family: 'Poppins';
+        font-size: 17px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .linked_list_text_pos a:visited {
+        color: #000000;
+    }
+
+    .linked_list_text_pos a:hover {
+        color: #38413f;
+    }
+    
                     
-                }
-            
-                .profile_text_pos
-                {
-                    position: absolute;
-                    left: 79%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-                }
-            
-                .works_text_pos
-                {
-                    position: absolute;
-                    left: 89%;
-                    top: 2%;
-                    font-family: 'Poppins';
-                    font-size: 24px;
-                    font-weight: 600;
-                    color:#ffffff;
-                }
+
+                
                 a:link {
                     color: rgb(255, 255, 255);
                     background-color: transparent;
@@ -95,17 +130,23 @@
                     background-color: transparent;
                     text-decoration: underline;
                 }
+
+                body {background: linear-gradient(to bottom right, #16EEBC, #000000 50%);
+                    color: #16EEBC;
+                    margin: 0;
+                    padding: 0;
+                }
             
             </style>
             
             
                 <div class="pos_cen">
             
-                <image class="img_deg" src="{{ url_for('static', filename='images/abc.png')}}"></image>
+                <image class="img_deg" src="{{ url_for('static', filename='images/Works.png')}}"></image>
                 </div>
             
                 <div class="main_text_pos">
-                <p > WORKS</p>
+                <p > </p>
                 </div>
             
                 <ul>
@@ -122,7 +163,19 @@
             
                 <ul>
                     <div class="works_text_pos">
-                    <li><a href="/works"> Works</a></li>
+                    <li><a href="/works", color: black> Works</a></li>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div class="linked_list_text_pos">
+                    <li><a href="/linked_list"> View Project</a></li>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div class="contacts_text_pos">
+                    <li><a href="/contacts"> Contacts</a></li>
                     </div>
                 </ul>
             {% endblock %}
