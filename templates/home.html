@@ -9,16 +9,15 @@
 
     .img_deg
     {
-        float: right;
+        position: absolute;
         width: 100%;
-        border-radius: 10px
+        top: 50%;
     }
 
     .pos_cen
     {
         position: absolute;
-        width: 96%;
-        left: 2%;
+        width: 100%;
         top: 10%;
 
     }
@@ -28,14 +27,27 @@
         position: absolute;
         width: 100%;
         left: 2%;
-        top: -3%;
+        top: -6%;
+        font-size: 65px;
     }
 
+    .collab_text_pos
+    {
+        position: absolute;
+        width: 100%;
+        left: 3%;
+        top: 50%;
+        font-family: "Rubik Mono One", monospace;
+        font-style: normal;
+        font-size: 85px;
+        font-weight: 400;
+        color:#ffffff;
+    }
     .home_text_pos
     {
         position: absolute;
-        left: 69%;
-        top: 2%;
+        left: 59%;
+        top: 5%;
         font-family: 'Poppins';
         font-size: 24px;
         font-weight: 600;
@@ -47,8 +59,8 @@
     .profile_text_pos
     {
         position: absolute;
-        left: 79%;
-        top: 2%;
+        left: 69%;
+        top: 5%;
         font-family: 'Poppins';
         font-size: 24px;
         font-weight: 600;
@@ -58,8 +70,19 @@
     .works_text_pos
     {
         position: absolute;
+        left: 79%;
+        top: 5%;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 600;
+        color:#ffffff;
+    }
+
+    .contacts_text_pos
+    {
+        position: absolute;
         left: 89%;
-        top: 2%;
+        top: 5%;
         font-family: 'Poppins';
         font-size: 24px;
         font-weight: 600;
@@ -96,12 +119,17 @@
 
     <div class="pos_cen">
 
-    <image class="img_deg" src="{{ url_for('static', filename='images/group2.jpg')}}" width="1880"></image>
+    <image class="img_deg" src="{{ url_for('static', filename='images/group_allblack.png')}}" width="1880"></image>
     </div>
 
     <div class="main_text_pos">
     <p > STACKED.</p>
     </div>
+
+    <div class="collab_text_pos">
+        <p > COLLABORATE.CODE.CONQUER.
+        </p>
+        </div>
 
     <ul>
         <div class="home_text_pos">
@@ -118,6 +146,12 @@
     <ul>
         <div class="works_text_pos">
         <li><a href="/works"> Works</a></li>
+        </div>
+    </ul>
+
+    <ul>
+        <div class="contacts_text_pos">
+        <li><a href="/contacts"> Contacts</a></li>
         </div>
     </ul>
 {% endblock %}
