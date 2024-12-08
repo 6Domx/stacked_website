@@ -5,10 +5,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <body style="background-color:rgb(0, 0, 0)">
+    <style>
+        body {background: black
+        }
+    </style>
     {% block content %}
     {% endblock %}
 </body>
